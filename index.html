@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js'></script>
+    <script src='main.js'></script>
+  </head>
+
+  <body>
+    <div ng-app="testapp">
+      <div ng-controller="dynamicCtrl">
+        <select ng-model="data.state">
+          <option value="oh">Ohio</option>
+        </select>
+        <select ng-model="data.pacode">
+          <option value="02058">02058</option>
+          <option value="99999">99999</option>
+        </select>
+        stack.{{data.state}}.{{data.pacode}}.html
+        <dyntemp data="data"></dyntemp>
+      <div>
+    </div>
+  </body>
+
+</html>
